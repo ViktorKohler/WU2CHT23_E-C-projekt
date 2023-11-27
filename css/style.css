@@ -1,0 +1,258 @@
+
+#wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 180px 1fr 3fr;
+    grid-template-rows: 35px 1fr 4fr;
+    grid-template-areas: 
+    "nav col col"
+    "nav rub rub"
+    "nav bild bild"
+    ;
+}
+
+#wrapper_card {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 180px 1fr 1fr;
+    grid-template-rows: 160px 4fr;
+    grid-template-areas: 
+    "nav rub rub"
+    "nav card1 card2"
+    ;
+}
+
+#wrapper_om_oss {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 180px 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 160px 1fr 1.5fr 1.5fr;
+    grid-template-areas: 
+    "nav rub rub rub rub"
+    "nav bild1 bild1 art1 art2"
+    "nav bild2 bild3 art1 art2"
+    "nav bild4 bild4 art1 art2"
+    
+    ;
+}
+
+#rub {
+    background-color: #f39c12;
+    grid-area: rub;
+    height: 160px;
+}
+
+#rub_card {
+    background-image: url(/img/Card.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-area: rub;
+    height: 180px;
+}
+
+#color {
+    background-image: linear-gradient(to bottom, #ffffff, #ffe0fd, #ffbbd2, #ff9e82, #f39c12);
+    grid-area: col;
+
+}
+
+#bild {
+    grid-area: bild;
+    background-image: url(/img/Main.jpg);
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;  
+    filter: brightness(78%);
+    transition: 0.5s;
+    display: flex;
+}
+
+#bildtext1 {
+    font-size: 50px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
+    position: relative;
+    left: 80px;
+    top: 20px;
+    color: #f39c12;
+    opacity: 30%;
+    transition: 1s;
+    
+}
+
+#bild:hover {
+    #bildtext1 {
+        font-size: 65px;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
+        position: relative;
+        left: 80px;
+        top: 20px;
+        opacity: 100%;
+    }
+
+}
+
+#nav {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    grid-area: nav;
+    /*transition: 0.5s;*/
+}
+
+/*#nav:hover {
+    background-color: rgb(255, 255, 255);
+    grid-area: nav;
+    width: 200px;
+}*/
+
+#meny {
+    display: flex;
+    flex-direction:column;
+    list-style: none;
+    justify-content: space-around;
+    height: 100%;
+
+}
+
+h1 {
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    
+}
+
+#card1 {
+    grid-area: card1;
+    background-color: #f39c12;
+    display: flex;
+    justify-content: center;
+
+}
+
+#card2 {
+    grid-area: card2;
+    background-color: #f39c12;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#from {
+    background-color: rgb(255, 255, 255);
+    width: 58%;
+    height:fit-content;
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 10px;
+    transition: 1s;
+
+}
+
+#to {
+    background-color: rgb(255, 255, 255);
+    width: 58%;
+    height:fit-content;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+#to:hover {
+    background-color: rgb(255, 255, 255);
+    width: 58%;
+    height: fit-content;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 10px;
+
+    #to_flights {
+        list-style: none;
+        width: 58%;
+        height: 100%;
+        display: block;
+    }
+}
+
+#from:hover {
+
+    background-color: rgb(255, 255, 255);
+    width: 58%;
+    height:fit-content;
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 10px;
+
+    #from_flights {
+        list-style: none;
+        width: 58%;
+        height: 100%;
+        display: block;
+    }
+}
+
+#from_flights {
+    list-style: none;
+    width: 58%;
+    height: 100%;
+    display: none;
+}
+
+#to_flights {
+    list-style: none;
+    width: 58%;
+    height: 100%;
+    display: none;
+}
+
+#flyg_combo {
+
+    background-color: rebeccapurple;
+    width: 58%;
+}
+
+#bild1 {
+    grid-area: bild1;
+    background-color: red;
+
+}
+
+#bild2 {
+    grid-area: bild2;
+    background-color: rgb(45, 16, 206);
+
+}
+
+#bild3 {
+    grid-area: bild3;
+    background-color: rgb(206, 16, 184);
+
+}
+
+#bild3 {
+    grid-area: bild3;
+    background-color: rgb(16, 212, 16);
+
+}
+
+#bild4 {
+    grid-area: bild4;
+    background-color: rgb(207, 232, 16);
+
+}
+
+#art1 {
+    grid-area: art1;
+    background-color: rgb(108, 37, 6);
+
+}
+
+#art2 {
+    grid-area: art2;
+    background-color: rgb(232, 16, 185);
+
+}
