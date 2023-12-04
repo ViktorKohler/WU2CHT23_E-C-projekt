@@ -2,10 +2,10 @@
 #wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 180px 1fr 3fr;
+    grid-template-columns: 160px 1fr 3fr;
     grid-template-rows: 35px 1fr 4fr;
     grid-template-areas: 
-    "nav col col"
+    "nav rub rub"
     "nav rub rub"
     "nav bild bild"
     ;
@@ -15,10 +15,11 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 180px 1fr 1fr;
-    grid-template-rows: 160px 4fr;
+    grid-template-rows: 160px 1fr 2fr;
     grid-template-areas: 
     "nav rub rub"
     "nav card1 card2"
+    "nav fav fav"
     ;
 }
 
@@ -47,7 +48,7 @@
     background-size: cover;
     background-position: center center;
     grid-area: rub;
-    height: 180px;
+    height: 160px;
 }
 
 #color {
@@ -56,52 +57,61 @@
 
 }
 
+#flygplan {
+    position: absolute;
+    top: 4px;
+    left: 320px;
+    width: 200px;
+}
+
 #bild {
     grid-area: bild;
     background-image: url(/img/Main.jpg);
     background-size: cover;                      
     background-repeat: no-repeat;
     background-position: center center;  
-    filter: brightness(78%);
     transition: 0.5s;
     display: flex;
 }
 
 #bildtext1 {
-    font-size: 50px;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
+    font-size: 30px;
+    width: 100%;
     position: relative;
-    left: 80px;
+    display: flex;
+    justify-content: center;
     top: 20px;
+    height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
     color: #f39c12;
-    opacity: 30%;
     transition: 1s;
     
 }
 
-#bild:hover {
+/*#bild:hover {
     #bildtext1 {
-        font-size: 65px;
+        width: 100%;
+        font-size: 55px;
+        height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden
         display: flex;
-        align-items: top;
         justify-content: center;
-        height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
-        position: relative;
-        left: 80px;
-        top: 20px;
-        opacity: 100%;
+        
     }
 
-}
+}*/
 
 #nav {
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     grid-area: nav;
+    
     /*transition: 0.5s;*/
+}
+
+.list {
+    width: 80px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 5px;
 }
 
 /*#nav:hover {
@@ -113,9 +123,22 @@
 #meny {
     display: flex;
     flex-direction:column;
-    list-style: none;
     justify-content: space-around;
+    position: relative;
+    right: 10px;
     height: 100%;
+    list-style: none; 
+
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+    
+}
+
+.list:hover {
+    background-color: #f39c12;
 
 }
 
@@ -209,11 +232,22 @@ h1 {
     display: none;
 }
 
-#flyg_combo {
-
-    background-color: rebeccapurple;
-    width: 58%;
+#fav_flyg {
+    grid-area: fav;
+    background-color: #f39c12;
+    position: relative;
+    display: flex;
 }
+
+.valda_flyg {
+    background-color: rgb(255, 255, 255);
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
+}
+
 
 #bild1 {
     grid-area: bild1;
