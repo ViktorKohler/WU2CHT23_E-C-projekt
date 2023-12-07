@@ -1,154 +1,164 @@
 
 #wrapper {
     display: grid;
+    width: 100hh;
     height: 100vh;
-    grid-template-columns: 160px 1fr 3fr;
-    grid-template-rows: 35px 1fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 500px 700px;
     grid-template-areas: 
-    "nav rub rub"
-    "nav rub rub"
-    "nav bild bild"
-    ;
+    "nav nav"
+    "rub rub"
+    "text bil";
+}
+
+body{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
 }
 
 #wrapper_card {
     display: grid;
     height: 100vh;
-    grid-template-columns: 180px 1fr 1fr;
-    grid-template-rows: 160px 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 230px 300px 60px 1fr;
     grid-template-areas: 
-    "nav rub rub"
-    "nav card1 card2"
-    "nav fav fav"
+    "nav nav"
+    "rub rub"
+    "card1 card2"
+    "minrub minrub"
+    "fav1 fav2"
     ;
 }
 
 #wrapper_om_oss {
     display: grid;
     height: 100vh;
-    grid-template-columns: 180px 0.5fr 0.5fr 1fr 1fr;
-    grid-template-rows: 160px 1fr 1.5fr 1.5fr;
+    grid-template-columns:1fr 1fr 1.5fr 1.5fr;
+    grid-template-rows: 60px 100px 0.8fr 1.5fr 2fr;
     grid-template-areas: 
-    "nav rub rub rub rub"
-    "nav bild1 bild1 art1 art2"
-    "nav bild2 bild3 art1 art2"
-    "nav bild4 bild4 art1 art2"
+    "nav nav nav nav"
+    "rub rub rub rub"
+    "bild1 bild2 title1 title2"
+    "bild1 bild2 art1 art2"
+    "bild3 bild3 art1 art2"
     
     ;
 }
 
-#rub {
-    background-color: #f39c12;
-    grid-area: rub;
-    height: 160px;
-}
-
-#rub_card {
-    background-image: url(/img/Card.jpg);
-    background-size: cover;
-    background-position: center center;
-    grid-area: rub;
-    height: 160px;
-}
-
-#color {
-    background-image: linear-gradient(to bottom, #ffffff, #ffe0fd, #ffbbd2, #ff9e82, #f39c12);
-    grid-area: col;
-
-}
-
-#flygplan {
-    position: absolute;
-    top: 4px;
-    left: 320px;
-    width: 200px;
-}
-
-#bild {
-    grid-area: bild;
-    background-image: url(/img/Main.jpg);
-    background-size: cover;                      
-    background-repeat: no-repeat;
-    background-position: center center;  
-    transition: 0.5s;
-    display: flex;
-}
-
-#bildtext1 {
-    font-size: 30px;
-    width: 100%;
+#main_li {
+    list-style: none;
     position: relative;
-    display: flex;
-    justify-content: center;
-    top: 20px;
-    height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden*/
-    color: #f39c12;
-    transition: 1s;
-    
+    left: 10%;
 }
-
-/*#bild:hover {
-    #bildtext1 {
-        width: 100%;
-        font-size: 55px;
-        height: 100%;/* gjorde så att hela articlen hörde till denna, annars gick inte att få texten centrerad över bilden
-        display: flex;
-        justify-content: center;
-        
-    }
-
-}*/
 
 #nav {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    background-color:#f39c12;
     grid-area: nav;
-    
-    /*transition: 0.5s;*/
+    display: flex;
+    border-bottom: #ffffff solid 5px;
 }
-
-.list {
-    width: 80px;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/*#nav:hover {
-    background-color: rgb(255, 255, 255);
-    grid-area: nav;
-    width: 200px;
-}*/
 
 #meny {
     display: flex;
-    flex-direction:column;
-    justify-content: space-around;
-    position: relative;
-    right: 10px;
-    height: 100%;
+    justify-content: space-evenly;
     list-style: none; 
-
+    width: 100%;
 }
 
 a { 
     text-decoration: none;
     color: black;
-    
 }
 
-.list:hover {
-    background-color: #f39c12;
-
+a:hover { 
+    color: rgb(255, 255, 255);
 }
 
-h1 {
-    font-size: 80px;
+#main_back {
+    grid-area: rub;
+    position: relative;
+    background-image: url(/img/Main.jpg);
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;  
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#main_back:before {
+    background-color: #ffffff;
+    opacity: 0.5;
+    filter: blur(10px);
+    width: 100%;
+    height: 150px;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 180px;
+    filter: blur(20px);
+}
+
+#main_rub {
+    font-size: 120px;
+
+}
+
+#bildtext1 {
+    grid-area: text;
+    font-size: 30px;
+    height: 100%;
+    background-color: #f39c12;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+#pilot_holder {
+    background-color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+#img_pilot {
+    width: 300px;
+    height: auto;
+    border: #ffffff solid 10px;
+}
+
+
+#rub_card_back {
+    background-image: url(/img/Card.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-area: rub;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card_rub {
+    background-image: ;
+    font-size: 100px;
+}
+
+
+
+h1 {
+    font-size: 40px;
     color: #ffffff;
     
+}
+
+h2 {
+    font-size: 20px;
 }
 
 #card1 {
@@ -156,6 +166,7 @@ h1 {
     background-color: #f39c12;
     display: flex;
     justify-content: center;
+    border-bottom: #ffffff solid 5px;
 
 }
 
@@ -164,8 +175,7 @@ h1 {
     background-color: #f39c12;
     display: flex;
     justify-content: center;
-
-
+    border-bottom: #ffffff solid 5px;
 }
 
 #from {
@@ -187,6 +197,13 @@ h1 {
     transition: 1s;
 }
 
+#to_flights {
+    list-style: none;
+    width: 58%;
+    height: 100%;
+    display: none;
+}
+
 #to:hover {
     background-color: rgb(255, 255, 255);
     width: 58%;
@@ -200,6 +217,13 @@ h1 {
         height: 100%;
         display: block;
     }
+}
+
+#from_flights {
+    list-style: none;
+    width: 58%;
+    height: 100%;
+    display: none;
 }
 
 #from:hover {
@@ -218,36 +242,72 @@ h1 {
     }
 }
 
-#from_flights {
-    list-style: none;
-    width: 58%;
-    height: 100%;
-    display: none;
+#minrub {
+    grid-area: minrub;
+    background-color: #f39c12;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
-#to_flights {
-    list-style: none;
-    width: 58%;
-    height: 100%;
-    display: none;
-}
-
-#fav_flyg {
-    grid-area: fav;
+#fav_flyg1 {
+    grid-area: fav1;
     background-color: #f39c12;
     position: relative;
     display: flex;
+    
+}
+
+#fav_flyg2 {
+    grid-area: fav2;
+    background-color: #f39c12;
+    position: relative;
+    display: flex;
+    
 }
 
 .valda_flyg {
     background-color: rgb(255, 255, 255);
     border: 10px solid rgb(253, 253, 253);
     border-radius: 10px;
-    width: 400px;
     height: 200px;
-
+    width: 550px;
 }
 
+.favbox {
+position: relative;
+left: 20%;
+}
+
+#rub_om_oss {
+    grid-area: rub;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background-color: #f39c12;
+    color: #ffffff;
+}
+
+#title1 {
+    grid-area: title1;
+    background-color: rgb(255, 255, 255);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title2 {
+    grid-area: title2;
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #bild1 {
     grid-area: bild1;
@@ -273,20 +333,14 @@ h1 {
 
 }
 
-#bild4 {
-    grid-area: bild4;
-    background-color: rgb(207, 232, 16);
-
-}
-
 #art1 {
     grid-area: art1;
-    background-color: rgb(108, 37, 6);
+    background-color:#f39c12;
 
 }
 
 #art2 {
     grid-area: art2;
-    background-color: rgb(232, 16, 185);
+    background-color: #f39c12;
 
 }
