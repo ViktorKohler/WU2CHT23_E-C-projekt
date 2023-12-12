@@ -22,13 +22,14 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 230px 300px 60px 1fr;
+    grid-template-rows: 60px 230px 300px 60px 1fr 1fr;
     grid-template-areas: 
     "nav nav"
     "rub rub"
     "card1 card2"
     "minrub minrub"
     "fav1 fav2"
+    "fav3 fav4"
     ;
 }
 
@@ -79,7 +80,7 @@ a:hover {
 #main_back {
     grid-area: rub;
     position: relative;
-    background-image: url(/img/Main.jpg);
+    background-image: url(../img/Main.jpg);
     background-size: cover;                      
     background-repeat: no-repeat;
     background-position: center center;  
@@ -134,7 +135,6 @@ a:hover {
     border: #ffffff solid 10px;
 }
 
-
 #rub_card_back {
     background-image: url(/img/Card.jpg);
     background-size: cover;
@@ -150,8 +150,6 @@ a:hover {
     font-size: 100px;
 }
 
-
-
 h1 {
     font-size: 40px;
     color: #ffffff;
@@ -164,7 +162,7 @@ h2 {
 
 #card1 {
     grid-area: card1;
-    background-color: #c7c23b;
+    background-color: #7F7648;
     display: flex;
     justify-content: center;
     border-bottom: #ffffff solid 2px;
@@ -174,7 +172,7 @@ h2 {
 
 #card2 {
     grid-area: card2;
-    background-color: #c7c23b;
+    background-color: #7F7648;
     display: flex;
     justify-content: center;
     border-bottom: #ffffff solid 2px;
@@ -270,24 +268,60 @@ h2 {
     
 }
 
-.valda_flyg1 {
-    background-image: url(/img/Caribian.jpg);
+#valda_flyg1 {
+    background-image: url(../img/Norway_Gudvagne.jpg);
     background-size: cover;
-    position: center center;
     border: 10px solid rgb(253, 253, 253);
     border-radius: 10px;
     height: 200px;
     width: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    color:#f39c12;
 }
 
-.valda_flyg2 {
-    background-image: url(/img/GardenOftheGods.jpg);
+#valda_flyg2 {
+    background-image: url(../img/Caribian.jpg);
     background-size: cover;
-    position: center center;
     border: 10px solid rgb(253, 253, 253);
     border-radius: 10px;
     height: 200px;
     width: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    color: #f39c12;
+}
+
+#valda_flyg3 {
+    background-image: url(../img/Cartagena.jpg);
+    background-size: cover;
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    color: #f39c12;
+}
+
+#valda_flyg4 {
+    background-image: url(../img/GardenOftheGods.jpg);
+    background-size: cover;
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    color: #f39c12;
 }
 
 .favbox {
@@ -298,7 +332,7 @@ list-style: none;
 
 #title1 {
     grid-area: title1;
-    background-color:#c7c23b;
+    background-color:#7F7648;
     border-bottom: #ffffff solid 2px;
     font-size: 50px;
     display: flex;
@@ -310,24 +344,19 @@ list-style: none;
 
 #bild1 {
     grid-area: bild1;
-    background-image: url(/img/Lova.png);
+    background-image: url(../img/Lova.png);
     background-size: cover;
-    position: relative;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
     border-left: #ffffff solid 2px;
     display: flex;
     font-size: 25px;
     justify-content: center;
-  
-    
-
-
 }
 
 #bild2 {
     grid-area: bild2;
-    background-image: url(/img/Lovina.png);
+    background-image: url(../img/Lovina.png);
     background-size: cover;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
@@ -338,9 +367,8 @@ list-style: none;
 
 #bild3 {
     grid-area: bild3;
-    background-image: url(/img/Viktor.png);
+    background-image: url(../img/Viktor.png);
     background-size: cover;
-    position: center center;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
     border-left: #ffffff solid 2px;
@@ -350,15 +378,14 @@ list-style: none;
 }
 
 .bildtext2 {
-    position: relative;
-    top: 180px;
+    display: flex;
+    align-items:flex-end ;
     color: rgb(255, 255, 255);
-
 }
 
 #art1 {
     grid-area: art1;
-    background-image: url(/img/clouds.jpg);
+    background-image: url(../img/clouds.jpg);
     background-size: cover;
     position: center center;
     color: rgb(154, 93, 8);
