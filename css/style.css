@@ -36,7 +36,7 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns:1fr 1fr 1.5fr 1.5fr;
-    grid-template-rows: 60px 0.8fr 4fr 6fr 1fr;
+    grid-template-rows: 60px 0.8fr 2fr 6fr;
     grid-template-areas: 
     "nav nav nav nav"
     "bild1 bild2 title1 title1"
@@ -69,23 +69,33 @@ body{
 #meny {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style: none; 
     width: 100%;
+    position: relative;
+    right: 9px;
 }
 
 a { 
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255) 2px;
+    background-color:#f39c12;
+    padding: 19px;
+    height: 100%;
+    
 }
 
+
+
 a:hover { 
-    color: rgb(255, 255, 255);
+    background-color: #9C803B;
 }
 
 #main_back {
     grid-area: rub;
     position: relative;
-    background-image: url(../img/Main.jpg);
+    background-image: url(../img/Planemain.jpg);
     background-size: cover;                      
     background-repeat: no-repeat;
     background-position: center center;  
@@ -142,7 +152,7 @@ a:hover {
 }
 
 #rub_card_back {
-    background-image: url(/img/Card.jpg);
+    background-image: url(/img/Cardrub.jpg);
     background-size: cover;
     background-position: center center;
     grid-area: rub;
@@ -178,7 +188,7 @@ p {
 
 #card1 {
     grid-area: card1;
-    background-color: #7F7648;
+    background-color: #9C803B;
     display: flex;
     justify-content: center;
     border-bottom: #ffffff solid 2px;
@@ -188,7 +198,7 @@ p {
 
 #card2 {
     grid-area: card2;
-    background-color: #7F7648;
+    background-color: #9C803B;
     display: flex;
     justify-content: center;
     border-bottom: #ffffff solid 2px;
@@ -209,28 +219,18 @@ p {
 
 #from_flights {
     list-style: none;
-    width: 58%;
     height: 100%;
     display: none;
+    width: 100%;
 }
 
-#from:hover {
-
-    background-color: rgb(255, 255, 255);
+#from:hover #from_flights { 
+    list-style: none;
     width: 58%;
-    height:fit-content;
-    border: 10px solid rgb(253, 253, 253);
-    border-radius: 10px;
-   
-    #from_flights {
-        list-style: none;
-        width: 58%;
-        height: 100%;
-        display: block;
-        font-size: 20px;
-        font-weight: bold;
-
-    }
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #to {
@@ -251,20 +251,13 @@ p {
     display: none;
 }
 
-#to:hover {
-    background-color: rgb(255, 255, 255);
+#to:hover #to_flights {
+    list-style: none;
     width: 58%;
-    height: fit-content;
-    border-radius: 10px;
-
-    #to_flights {
-        list-style: none;
-        width: 58%;
-        height: 100%;
-        display: block;
-        font-size: 20px;
-        font-weight: bold;
-    }
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #minrub {
@@ -285,6 +278,7 @@ p {
     position: relative;
     display: flex;
     
+    
 }
 
 #fav_flyg2 {
@@ -292,7 +286,7 @@ p {
     background-color: #f39c12;
     position: relative;
     display: flex;
-    
+    align-items: center;
 }
 
 .color_card {
@@ -379,7 +373,7 @@ list-style: none;
 
 #title1 {
     grid-area: title1;
-    background-color:#7F7648;
+    background-color:#9C803B;
     position: relative;
     bottom: 50px;
     font-size: 50px;
@@ -393,7 +387,7 @@ list-style: none;
 
 #bild1 {
     grid-area: bild1;
-    background-image: url(../img/Lova.png);
+    background-image: url(../img/Lova.jpg);
     background-size: cover;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
@@ -405,7 +399,7 @@ list-style: none;
 
 #bild2 {
     grid-area: bild2;
-    background-image: url(../img/Lovina.png);
+    background-image: url(../img/Lovina.jpg);
     background-size: cover;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
@@ -416,7 +410,7 @@ list-style: none;
 
 #bild3 {
     grid-area: bild3;
-    background-image: url(../img/Viktor.png);
+    background-image: url(../img/Viktor.jpg);
     background-size: cover;
     border-bottom: #ffffff solid 2px;
     border-right: #ffffff solid 2px;
